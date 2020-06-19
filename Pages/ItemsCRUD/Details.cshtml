@@ -1,0 +1,36 @@
+﻿@page
+@model MYAPP.Pages.ItemsCRUD.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.Email)
+        </dd>
+        <dt>
+           Order
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.name)
+        </dd>
+        <dt>
+           Description
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Item.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
